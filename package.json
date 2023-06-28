@@ -13,7 +13,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-image": "^4.1.0",
-    "superjson": "^1.12.3"
+    "superjson": "^1.12.4"
   },
   "devDependencies": {
     "@types/node": "20.3.1",
