@@ -1,0 +1,48 @@
+/*### リッチリンク*/
+
+/* カード全体像 */
+.blogcard {
+  max-width: var(--element-width-in-content);
+  min-height: 120px;
+  margin: 0px 0px 30px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(211, 211, 211);
+  position: relative;
+}
+
+/* 画像 */
+.image {
+  position: relative;
+  display: inline-block;
+  float: right;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.url {
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+.description {
+  margin-bottom: 32px;
+  padding-right: 10px;
+  color: #888;
+}
+
+.title {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.a {
+  max-width: var(--element-width-in-content);
+  text-decoration: none;
+  color: var(--black-color);
+  display: block;
+}
