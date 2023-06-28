@@ -38,16 +38,16 @@ export default function HomePage(props) {
         <p>主に使用しているActivityPub対応SNSのアカウントです。</p>
       </Content>
 
+      <Content title={"Misskey"}>
+        <Blogcard meta={props.key1} />
+      </Content>
+
       <Content title={"Qiita"}>
         <Blogcard meta={props.key4} />
       </Content>
 
       <Content title={"GitHub"}>
         <Blogcard meta={props.key5} />
-      </Content>
-
-      <Content title={"Misskey"}>
-        <Blogcard meta={props.key1} />
       </Content>
 
       <Content title={"VRChat"}>
