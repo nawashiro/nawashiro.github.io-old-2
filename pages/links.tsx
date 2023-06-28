@@ -4,7 +4,7 @@ import Blogcard from "../components/blogCard";
 import Content from "../components/content";
 import BlogcardImitation from "../components/blogCardImitation";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   return GetOgp([
     "https://gamelinks007.net/@nawashiro",
     "https://misskey.io/@continue5645",

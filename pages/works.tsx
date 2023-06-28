@@ -3,7 +3,7 @@ import ContentArticle from "../components/content-article";
 import { GetOgp } from "../features/get-ogp";
 import Blogcard from "../components/blogCard";
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   return GetOgp(["https://nawashiro.github.io/"]);
 };
 
@@ -40,9 +40,7 @@ export default function HomePage(props) {
         <Blogcard meta={props.key0}></Blogcard>
 
         <p>手始めに作り始めた個人サイトです。</p>
-        <p>
-          学生時代に作成したものを元に色々修正して作りました。
-        </p>
+        <p>学生時代に作成したものを元に色々修正して作りました。</p>
         <p>初期はHTMLベタ打ちでしたが、現在はNext.jsにて構築されています。</p>
       </ContentArticle>
     </Layout>
