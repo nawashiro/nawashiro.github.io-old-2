@@ -1,6 +1,8 @@
 import Wrapcontent from "./wrapcontent";
 import Nav from "./nav";
 import Title from "./title";
+import { IconContext } from "react-icons";
+import { IoIosClose, IoIosMenu } from "react-icons/io";
 
 export default function Header() {
   return (
@@ -14,8 +16,10 @@ export default function Header() {
           <Nav />
         </div>
         <p className="menubtn">
-          <span className="menuico"></span>
-          <span className="closeico"></span>
+          <IconContext.Provider value={{ size: "2.5rem" }}>
+            <IoIosMenu className="menuico" />
+            <IoIosClose className="closeico"></IoIosClose>
+          </IconContext.Provider>
         </p>
       </Wrapcontent>
     </header>

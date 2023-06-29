@@ -226,18 +226,14 @@ header .wrapcontent .hd-sm-2 nav li {
   header .wrapcontent .menubtn:hover {
     opacity: 0.6;
   }
-  header .wrapcontent .menubtn .menuico::after {
+  header .wrapcontent .menubtn .menuico {
     font-size: 2.5rem;
-    font-family: "Material Icons";
-    content: "\e5d2";
     position: absolute;
     bottom: 3px;
     right: 18px;
   }
   header .wrapcontent .menubtn .closeico::after {
     font-size: 2.5rem;
-    font-family: "Material Icons";
-    content: "\e5cd";
     position: absolute;
     bottom: 3px;
     right: 18px;
