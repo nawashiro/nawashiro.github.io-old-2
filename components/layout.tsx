@@ -11,12 +11,15 @@ export default function Layout({ children, title }) {
   return (
     <Fragment>
       <Head>
-        <title>{title ? title + " - Nawashiro" : "Nawashiro"}</title>
+        <title>{title ? title : "Nawashiro"}</title>
 
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-        <meta property="og:title" content={title} />
+        <meta
+          property="og:title"
+          content={title ? title + " - Nawashiro" : "Nawashiro"}
+        />
         <meta property="og:description" content="Nawashiroの個人サイト" />
         <meta property="og:url" content="https://nawashiro.github.io" />
         <meta property="og:type" content="website" />
