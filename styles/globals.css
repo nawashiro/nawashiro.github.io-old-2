@@ -208,9 +208,9 @@ header .wrapcontent .hd-sm-2 nav li {
     text-align: center;
     background-color: var(--strong-crystal-clear-black);
     display: block;
+    transition: 0.3s all;
   }
   .hd-sm-3 ul li a:hover {
-    transition: 0.3s all;
     color: var(--black-color);
     background-color: #fff;
     opacity: 1;
