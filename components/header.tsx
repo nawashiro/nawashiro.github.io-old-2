@@ -13,12 +13,8 @@ export default function Header() {
     setIsActive(!isActive);
   };
 
-  const menuico = isActive
-    ? { opacity: 0, transition: "0.2s" }
-    : { opacity: 1, transition: "0.2s" };
-  const closeico = isActive
-    ? { opacity: 1, transition: "0.2s" }
-    : { opacity: 0, transition: "0.2s" };
+  const menuico = isActive ? { opacity: 0 } : { opacity: 1 };
+  const closeico = isActive ? { opacity: 1 } : { opacity: 0 };
   const hdsm3 = isActive ? { display: "flex" } : { display: "none" };
 
   return (
