@@ -95,7 +95,7 @@ h2 {
   display: none;
 }
 .closeico {
-  display: none;
+  opacity: 0;
 }
 
 /*ロゴ*/
@@ -160,7 +160,7 @@ header .wrapcontent .hd-sm-2 nav li {
   background-position: center;
   background-size: cover;
 }
-#heroimage ul {
+#hd-sm-3 ul {
   display: none;
 }
 #heroimage p {
@@ -180,7 +180,7 @@ header .wrapcontent .hd-sm-2 nav li {
   padding: 10px 20px 10px 20px;
 }
 @media screen and (max-width: 767px) {
-  #heroimage ul {
+  .hd-sm-3 ul {
     display: flex;
     justify-content: space-between;
     position: absolute;
@@ -192,11 +192,11 @@ header .wrapcontent .hd-sm-2 nav li {
     list-style: none;
     flex-direction: column;
   }
-  #heroimage ul li {
+  .hd-sm-3 ul li {
     width: calc(100% - 60px);
     margin: 30px auto 0 auto;
   }
-  #heroimage ul li a {
+  .hd-sm-3 ul li a {
     line-height: 1;
     text-decoration: none;
     color: #fff;
@@ -209,41 +209,46 @@ header .wrapcontent .hd-sm-2 nav li {
     background-color: var(--strong-crystal-clear-black);
     display: block;
   }
-  #heroimage ul li a:hover {
+  .hd-sm-3 ul li a:hover {
     transition: 0.3s all;
     color: var(--black-color);
     background-color: #fff;
     opacity: 1;
   }
+
   /* ハンバーガーメニュー*/
   header .wrapcontent .hd-sm-2 {
     display: none;
   }
   header .wrapcontent .menubtn {
     display: inline;
+    position: relative;
     margin: auto 10px 0 auto;
+    background: transparent;
+    border: none;
+    z-index: 6;
   }
   header .wrapcontent .menubtn:hover {
     opacity: 0.6;
   }
   header .wrapcontent .menubtn .menuico {
-    font-size: 2.5rem;
     position: absolute;
-    bottom: 3px;
-    right: 18px;
+    bottom: -10px;
+    right: 0px;
   }
-  header .wrapcontent .menubtn .closeico::after {
-    font-size: 2.5rem;
+  header .wrapcontent .menubtn .closeico {
     position: absolute;
-    bottom: 3px;
-    right: 18px;
+    bottom: -10px;
+    right: 0px;
   }
   .hd-sm-3 {
     width: 100%;
     height: 480px;
     background-color: var(--strong-crystal-clear-black);
     z-index: 5;
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 

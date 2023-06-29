@@ -19,9 +19,6 @@ export default function HeroimageTop() {
         `}
       </style>
       <div id="heroimage" style={{ color: "red" }}>
-        <div className="hd-sm-3">
-          <Nav />
-        </div>
         <Wrapcontent>
           <p>撮影場所：長島ダム　大井川旅行にて</p>
         </Wrapcontent>
