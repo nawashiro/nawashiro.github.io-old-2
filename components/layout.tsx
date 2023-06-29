@@ -5,19 +5,16 @@ import { Fragment } from "react";
 import Wrapcontent from "./wrapcontent";
 import HeroimageTop from "./heroimageTop";
 import Head from "next/head";
+import PageTop from "./pageTop";
 
 export default function Layout({ children, title }) {
   return (
     <Fragment>
       <Head>
-        <title>{title ? title : "Nawashiro"}</title>
+        <title>{title ? title + " - Nawashiro" : "Nawashiro"}</title>
 
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        />
 
         <meta property="og:title" content={title} />
         <meta property="og:description" content="Nawashiroの個人サイト" />
@@ -40,11 +37,7 @@ export default function Layout({ children, title }) {
 
       <Wrapcontent>{children}</Wrapcontent>
       <Footer />
-      <div id="page_top">
-        <a href="#" className="upico">
-          {" "}
-        </a>
-      </div>
+      <PageTop />
     </Fragment>
   );
 }

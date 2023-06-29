@@ -77,10 +77,11 @@ export default function HomePage() {
       </Content>
       <Content title="新着情報">
         <dl className="date-dl">
-          {whatsNews.map((whatsNew) => (
+          {whatsNews.map((whatsNew, index) => (
             <WhatsNewOutput
               date={whatsNew.date}
               content={whatsNew.content}
+              key={index}
             ></WhatsNewOutput>
           ))}
         </dl>
