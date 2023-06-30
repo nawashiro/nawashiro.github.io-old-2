@@ -71,6 +71,7 @@ export default function HomePage() {
 
   return (
     <Layout title={""}>
+      <a rel="me" href="https://gamelinks007.net/@nawashiro"></a>
       <Content title="ごあいさつ">
         <p>Nawashiroのサイトへようこそ。 ここはNawashiroの個人サイトです。</p>
         <p>趣味の制作物や旅行の写真などを掲載していく予定です。</p>

@@ -27,12 +27,6 @@ export default function Layout({ children, title }) {
           property="og:image"
           content="https://nawashiro.github.io/images/ogp/ogp.jpg"
         />
-
-        {title ? (
-          <></>
-        ) : (
-          <a rel="me" href="https://gamelinks007.net/@nawashiro"></a>
-        )}
       </Head>
 
       <Header />
