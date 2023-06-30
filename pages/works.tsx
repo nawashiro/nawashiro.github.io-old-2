@@ -2,6 +2,7 @@ import Layout from "../components/layout";
 import ContentArticle from "../components/content-article";
 import { GetOgp } from "../features/get-ogp";
 import Blogcard from "../components/blogCard";
+import YouTube from "react-youtube";
 
 export const getStaticProps = async () => {
   return GetOgp(["https://nawashiro.github.io/"]);
@@ -14,13 +15,9 @@ export default function HomePage(props) {
         date="2023-6-9"
         title="ライトニングトーク『分散型SNS Nostrの世界』"
       >
-        <iframe
-          src="https://www.youtube.com/embed/uV_1eC4ibOY"
-          title="YouTube video player"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+        <YouTube
+          videoId="uV_1eC4ibOY"
+        />
         <p>
           VRChat内コミュニティ「エンジニア作業飲み集会」にてライトニングトークに参加しました。
           <br />
