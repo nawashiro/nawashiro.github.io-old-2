@@ -1,3 +1,5 @@
+import { Meta } from "./Meta";
+
 const { JSDOM } = require("jsdom");
 
 function noUndefind(item) {
@@ -12,7 +14,7 @@ export async function GetOgp(hrefs: string[]) {
     const meta = await fetch(href)
       .then((res) => res.text())
       .then((text) => {
-        const metaData = {
+        const metaData: Meta = {
           url: href,
           title: "",
           description: "",
