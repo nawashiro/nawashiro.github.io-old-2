@@ -3,6 +3,7 @@ import ContentArticle from "../components/content-article";
 import { GetOgp } from "../features/get-ogp";
 import Blogcard from "../components/blogCard";
 import YouTube from "react-youtube";
+import youtubeStyle from "../styles/youtube.module.css";
 
 export const getStaticProps = async () => {
   return GetOgp(["https://nawashiro.github.io/"]);
@@ -17,6 +18,8 @@ export default function HomePage(props) {
       >
         <YouTube
           videoId="uV_1eC4ibOY"
+          iframeClassName={youtubeStyle.iframe}
+          className={youtubeStyle.youtube}
         />
         <p>
           VRChat内コミュニティ「エンジニア作業飲み集会」にてライトニングトークに参加しました。
