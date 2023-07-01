@@ -6,11 +6,21 @@ type Metas = {
   meta: Meta;
 };
 
+function count(str: string) {
+  let len: number = 0;
+
+  for (let i = 0; i < str.length; i++) {
+    str[i].match(/[ -~]/) ? (len += 1) : (len += 2);
+  }
+
+  return len;
+}
+
 export default function Blogcard({ meta }: Metas) {
-  const domain = meta.url.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)[1];
-  const maxLength = 52;
-  const description =
-    meta.description.length > maxLength
+  const domain: string = meta.url.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)[1];
+  const maxLength: number = 102;
+  const description: string =
+    count(meta.description) > maxLength
       ? meta.description.slice(0, maxLength) + "…"
       : meta.description;
   return (
