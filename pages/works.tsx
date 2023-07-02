@@ -32,14 +32,14 @@ export default function HomePage(props) {
         <p>書籍情報をツイッターで共有するためのWEBアプリです。</p>
       </ContentArticle>
       <ContentArticle date="2022-12-13" title="個人サイト">
+        <p>手始めに作り始めた個人サイトです。</p>
+        <p>学生時代に作成したものを元に色々修正して作りました。</p>
+        <p>初期はHTMLベタ打ちでしたが、現在はNext.jsにて構築されています。</p>
         <img
           src="./images/landscape_photography/Nawashiro_website_Screenshot.jpg"
           alt="Nawashiro - website"
           loading="lazy"
         />
-        <p>手始めに作り始めた個人サイトです。</p>
-        <p>学生時代に作成したものを元に色々修正して作りました。</p>
-        <p>初期はHTMLベタ打ちでしたが、現在はNext.jsにて構築されています。</p>
         <Blogcard meta={props.key0}></Blogcard>
       </ContentArticle>
     </Layout>
