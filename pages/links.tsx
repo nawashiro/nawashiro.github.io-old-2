@@ -19,23 +19,23 @@ export default function HomePage(props) {
   return (
     <Layout title={"リンク"}>
       <Content title={"Twitter"}>
+        <p>主に使用しているTwitterアカウントです。</p>
         <BlogcardImitation
           url={"https://twitter.com/yineleyici"}
           title={"Nawashiro"}
           description={""}
           image={"./images/contents/Twitter social icons - square - blue.svg"}
         />
-        <p>主に使用しているTwitterアカウントです。</p>
       </Content>
 
       <Content title={"読書メーター"}>
-        <Blogcard meta={props.key2} />
         <p>読んだ本をまとめています。たまに感想も書きます。</p>
+        <Blogcard meta={props.key2} />
       </Content>
 
       <Content title={"Mastodon"}>
-        <Blogcard meta={props.key0} />
         <p>主に使用しているActivityPub対応SNSのアカウントです。</p>
+        <Blogcard meta={props.key0} />
       </Content>
 
       <Content title={"Misskey"}>
