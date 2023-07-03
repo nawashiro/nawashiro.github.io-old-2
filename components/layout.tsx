@@ -6,8 +6,12 @@ import Wrapcontent from "./wrapcontent";
 import HeroimageTop from "./heroimageTop";
 import Head from "next/head";
 import PageTop from "./pageTop";
-
-export default function Layout({ children, title }) {
+import { ReactNode } from "react";
+type Props = {
+  children: ReactNode;
+  title: string;
+};
+export default function Layout({ children, title }: Props) {
   return (
     <Fragment>
       <Head>

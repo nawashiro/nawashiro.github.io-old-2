@@ -1,7 +1,16 @@
 import style from "../styles/BlogCard.module.css";
-import { Img } from "react-image";
-
-export default function BlogcardImitation({ url, title, description, image }) {
+type Props = {
+  url: string;
+  title: string;
+  description: string;
+  image: string;
+};
+export default function BlogcardImitation({
+  url,
+  title,
+  description,
+  image,
+}: Props) {
   const domain = url.match(/^https?:\/{2,}(.*?)(?:\/|\?|#|$)/)[1];
   return (
     <a href={url} target="_brank" className={style.a}>

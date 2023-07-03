@@ -1,6 +1,8 @@
-import Nav from "./nav";
 import Wrapcontent from "./wrapcontent";
-export default function Heroimage({ title }) {
+type Props = {
+  title: string;
+};
+export default function Heroimage({ title }: Props) {
   return (
     <div id="heroimage">
       <Wrapcontent>
