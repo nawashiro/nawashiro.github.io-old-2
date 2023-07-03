@@ -9,7 +9,9 @@ function WhatsNewOutput({ date, content }) {
     <Fragment>
       <dt>
         <time dateTime={date}>
-          {format(new Date(date), "y年M月d日", { locale: ja })}
+          {format(new Date(date.replace(/-/g, "/")), "y年M月d日", {
+            locale: ja,
+          })}
         </time>
       </dt>
       <dd>

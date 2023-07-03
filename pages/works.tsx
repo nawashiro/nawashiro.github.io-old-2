@@ -4,6 +4,7 @@ import { GetOgp } from "../features/get-ogp";
 import Blogcard from "../components/blogCard";
 import YouTube from "react-youtube";
 import youtubeStyle from "../styles/youtube.module.css";
+import { Fragment } from "react";
 
 export const getStaticProps = async () => {
   return GetOgp(["https://nawashiro.github.io/"]);
