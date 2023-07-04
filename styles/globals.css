@@ -9,6 +9,7 @@
   --strong-crystal-clear-black: rgba(0, 0, 0, 0.7);
   --element-width-in-content: 717px;
   --max-widh-of-element: 1200px;
+  --backdrop-filter-value: 5px;
 }
 
 /* ### reset css*/
@@ -117,12 +118,13 @@ header {
   line-height: 1;
   background-color: var(--crystal-clear-black);
   color: white;
-  height: 80px;
+  height: 60px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   z-index: 10;
   white-space: nowrap;
+  backdrop-filter: blur(var(--backdrop-filter-value));
 }
 header h1 {
   margin-left: 10px;
