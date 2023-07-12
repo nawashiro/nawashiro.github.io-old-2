@@ -4,6 +4,7 @@ import { GetOgp } from "../features/get-ogp";
 import Blogcard from "../components/blogCard";
 import YouTube from "react-youtube";
 import youtubeStyle from "../styles/youtube.module.css";
+import slideStyle from "../styles/slide.module.css";
 
 export const getStaticProps = async () => {
   return GetOgp(["https://nawashiro.github.io/"]);
@@ -17,10 +18,16 @@ export default function HomePage(props) {
         title="ライトニングトーク『分散型SNS Nostrの世界』"
       >
         <p>
-          VRChat内コミュニティ「エンジニア作業飲み集会」にてライトニングトークに参加しました。
+          VRコミュニティ「エンジニア作業飲み集会」にてライトニングトークに参加しました。
           <br />
           今回は分散型SNSであるNostrについて取り上げました。
         </p>
+        <iframe
+          src="https://docs.google.com/presentation/d/e/2PACX-1vRWqSIA4Vrn0ZPEpfuYlSC5cfiTBQMtwulfGlse-aEl1Xbk3PYD0NsqAvSY1gjDuRfxKJHY7StW2IuH/embed?start=false&loop=false&delayms=3000"
+          frameBorder="0"
+          allowFullScreen={true}
+          className={slideStyle.iframe}
+        ></iframe>
         <YouTube
           videoId="uV_1eC4ibOY"
           iframeClassName={youtubeStyle.iframe}
@@ -28,7 +35,7 @@ export default function HomePage(props) {
         />
       </ContentArticle>
       <ContentArticle date="2023-1-15" title="書籍情報共有アプリ">
-        <p>※サイト移行作業中につき非公開（2023/6/22）</p>
+        <p>※サイト移行作業中につき非公開</p>
         <p>書籍情報をツイッターで共有するためのWEBアプリです。</p>
       </ContentArticle>
       <ContentArticle date="2022-12-13" title="個人サイト">

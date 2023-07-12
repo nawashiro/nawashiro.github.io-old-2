@@ -29,6 +29,10 @@ type WhatsNewItem = {
 export default function HomePage() {
   const whatsNews: WhatsNewItem[] = [
     {
+      date: "2023-07-12",
+      content: "サイト全体に軽微な修正をしました。",
+    },
+    {
       date: "2023-06-28",
       content: "サイト全体をNext.jsで再構築しました。",
     },

@@ -39,6 +39,7 @@ export default function HomePage(props) {
       </Content>
 
       <Content title={"Misskey"}>
+        <p>たまにこちらにもいます。国産のSNSは貴重なので注目しています。</p>
         <Blogcard meta={props.key1} />
       </Content>
 
