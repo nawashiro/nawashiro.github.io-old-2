@@ -17,12 +17,12 @@
   border: none;
   transition: 0.5s;
 }
-
-.button:hover {
-  opacity: 0.4;
-  transition: "0.5s";
+@media (hover: hover) {
+  .button:hover {
+    opacity: 0.4;
+    transition: "0.5s";
+  }
 }
-
 .icon {
   position: absolute;
   bottom: 5px;
