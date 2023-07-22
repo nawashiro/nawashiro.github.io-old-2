@@ -3,7 +3,6 @@ import Nav from "./nav";
 import Title from "./title";
 import { IconContext } from "react-icons";
 import { IoIosClose, IoIosMenu } from "react-icons/io";
-import style from "../styles/header.module.css";
 import { useState } from "react";
 
 export default function Header() {
@@ -13,12 +12,12 @@ export default function Header() {
     setIsActive(!isActive);
   };
 
-  const menuico = isActive ? { opacity: 0 } : { opacity: 1 };
-  const closeico = isActive ? { opacity: 1 } : { opacity: 0 };
+  const menuico = isActive ? { display: "none" } : { display: "inline" };
+  const closeico = isActive ? { display: "inline" } : { display: "none" };
   const hdsm3 = isActive ? { display: "flex" } : { display: "none" };
 
   return (
-    <header style={style}>
+    <header>
       <Wrapcontent>
         <div className="hd-sm-1">
           <Title />
@@ -30,8 +29,14 @@ export default function Header() {
 
         <button onClick={toggleMenu} className="menubtn">
           <IconContext.Provider value={{ size: "2.5rem", color: "#fff" }}>
-            <IoIosMenu className="menuico" style={menuico} />
-            <IoIosClose className="closeico" style={closeico}></IoIosClose>
+            <div style={menuico} className="menu">
+              <IoIosMenu className="menuico" />
+              メニュー
+            </div>
+            <div style={closeico}>
+              <IoIosClose className="closeico"></IoIosClose>
+              閉じる
+            </div>
           </IconContext.Provider>
         </button>
 

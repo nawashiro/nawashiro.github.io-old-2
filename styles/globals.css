@@ -10,6 +10,9 @@
   --element-width-in-content: 717px;
   --max-widh-of-element: 1200px;
   --backdrop-filter-value: 5px;
+  --font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
+    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka,
+    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 /* ### reset css*/
@@ -59,9 +62,7 @@ html {
   height: 100%;
 }
 body {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",
-    "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka,
-    "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: var(--font-family);
   background-color: white;
   line-height: 1.8;
   font-size: 16px;
@@ -71,9 +72,11 @@ body {
 a {
   transition: opacity 0.3s ease;
 }
-a:hover {
-  text-decoration: none;
-  opacity: 0.6;
+@media (hover: hover) {
+  a:hover {
+    text-decoration: none;
+    opacity: 0.6;
+  }
 }
 .wrapcontent {
   max-width: var(--max-widh-of-element);
@@ -94,9 +97,6 @@ h2 {
 }
 .hd-sm-3 {
   display: none;
-}
-.closeico {
-  opacity: 0;
 }
 
 /*ロゴ*/
@@ -138,6 +138,7 @@ header .wrapcontent {
   align-items: flex-end;
   width: 100%;
   padding-bottom: 10px;
+  position: relative;
 }
 header .wrapcontent .hd-sm-2 {
   margin-left: auto;
@@ -212,10 +213,13 @@ header .wrapcontent .hd-sm-2 nav li {
     display: block;
     transition: 0.3s all;
   }
-  .hd-sm-3 ul li a:hover {
-    color: var(--black-color);
-    background-color: #fff;
-    opacity: 1;
+
+  @media (hover: hover) {
+    .hd-sm-3 ul li a:hover {
+      color: var(--black-color);
+      background-color: #fff;
+      opacity: 1;
+    }
   }
 
   /* ハンバーガーメニュー*/
@@ -224,24 +228,32 @@ header .wrapcontent .hd-sm-2 nav li {
   }
   header .wrapcontent .menubtn {
     display: inline;
-    position: relative;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
     margin: auto 10px 0 auto;
     background: transparent;
     border: none;
     z-index: 6;
+    color: white;
+    align-items: center;
+    font-family: var(--font-family);
+    font-size: 1rem;
   }
-  header .wrapcontent .menubtn:hover {
-    opacity: 0.6;
+  @media (hover: hover) {
+    header .wrapcontent .menubtn:hover {
+      opacity: 0.6;
+    }
   }
   header .wrapcontent .menubtn .menuico {
     position: absolute;
-    bottom: -10px;
-    right: 0px;
+    left: -35px;
+    bottom: -6px;
   }
   header .wrapcontent .menubtn .closeico {
     position: absolute;
-    bottom: -10px;
-    right: 0px;
+    left: -28px;
+    bottom: -6px;
   }
   .hd-sm-3 {
     width: 100%;

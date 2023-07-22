@@ -29,6 +29,15 @@ type WhatsNewItem = {
 export default function HomePage() {
   const whatsNews: WhatsNewItem[] = [
     {
+      date: "2023-07-22",
+      content: "「私について」に「分散SNS集会」について追記しました。",
+    },
+    {
+      date: "2023-07-22",
+      content:
+        "「作ったもの」に「ライトニングトーク『いろいろな分散型SNS / 分散SNS集会へのいざない』」を追加しました。",
+    },
+    {
       date: "2023-07-12",
       content: "サイト全体に軽微な修正をしました。",
     },
