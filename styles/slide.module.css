@@ -1,10 +1,11 @@
 .iframe {
   width: var(--element-width-in-content);
-  aspect-ratio: 16/9;
+  height: calc(calc(var(--element-width-in-content) / 1.777) + 36px);
   margin: 0px 0px 30px 0px;
 }
 @media screen and (max-width: 787px) {
   .iframe {
     width: 100%;
+    height: calc(calc(100vw - 20px) / 1.777);
   }
 }
