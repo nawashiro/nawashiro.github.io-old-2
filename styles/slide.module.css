@@ -6,6 +6,6 @@
 @media screen and (max-width: 787px) {
   .iframe {
     width: 100%;
-    height: calc(calc(100vw - 20px) / 1.777);
+    height: calc(calc(calc(100vw - 70px) / 1.777) + 36px);
   }
 }
