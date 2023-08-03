@@ -30,6 +30,11 @@ export default function HomePage(props) {
           allowFullScreen={true}
           className={slideStyle.iframe}
         ></iframe>
+        <YouTube
+          videoId="afBsTQCKg-8"
+          iframeClassName={youtubeStyle.iframe}
+          className={youtubeStyle.youtube}
+        />
       </ContentArticle>
 
       <ContentArticle
