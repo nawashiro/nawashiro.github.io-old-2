@@ -3,6 +3,7 @@ import ja from "date-fns/locale/ja";
 import { Fragment } from "react";
 import Layout from "../components/layout";
 import Content from "../components/content";
+import { useAccordion } from "../features/useAccordion";
 
 function WhatsNewOutput({ date, content }) {
   return (
@@ -84,6 +85,8 @@ export default function HomePage() {
     },
   ];
 
+  const { isOpen, setIsOpen, accordionRef } = useAccordion();
+
   return (
     <Layout title={""}>
       <a rel="me" href="https://gamelinks007.net/@nawashiro"></a>
@@ -93,7 +96,7 @@ export default function HomePage() {
       </Content>
       <Content title="新着情報">
         <dl className="date-dl">
-          {whatsNews.map((whatsNew, index) => (
+          {whatsNews.slice(0, 3).map((whatsNew, index) => (
             <WhatsNewOutput
               date={whatsNew.date}
               content={whatsNew.content}
@@ -101,6 +104,41 @@ export default function HomePage() {
             ></WhatsNewOutput>
           ))}
         </dl>
+
+        <div
+          id="contents"
+          className="accordion-body"
+          aria-hidden={!isOpen}
+          ref={accordionRef}
+        >
+          <div>
+            <dl className="date-dl">
+              {whatsNews.slice(3).map((whatsNew, index) => (
+                <WhatsNewOutput
+                  date={whatsNew.date}
+                  content={whatsNew.content}
+                  key={index}
+                ></WhatsNewOutput>
+              ))}
+            </dl>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          aria-controls="contents"
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? "過去の情報を閉じる" : "過去の情報を開く"}
+        </button>
+
+        <style jsx>{`
+          .accordion-body {
+            height: 0;
+            overflow: hidden;
+          }
+        `}</style>
       </Content>
     </Layout>
   );
