@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import Layout from "../components/layout";
 import Content from "../components/content";
 import { useAccordion } from "../features/useAccordion";
+import WhatsNewOutputButtonStyle from "../styles/whatsNewOutputButton.module.css";
 
 function WhatsNewOutput({ date, content }) {
   return (
@@ -129,6 +130,7 @@ export default function HomePage() {
           aria-controls="contents"
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
+          className={WhatsNewOutputButtonStyle.WhatsNewOutputButton}
         >
           {isOpen ? "過去の情報を閉じる" : "過去の情報を開く"}
         </button>
